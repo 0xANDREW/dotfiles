@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 
-alias pac="yaourt --noconfirm"
+alias pac="yaourt --noconfirm -y"
 alias pacu="pac -Syu"  
 alias picocom="picocom -l"
 alias pbinclip='xclip -o | pastebincl | grep URL | cut -c 6- | xclip'

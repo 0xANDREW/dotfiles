@@ -84,12 +84,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     , ((modm .|. shiftMask, xK_x     ), spawn "xscreensaver-command -lock")
 
-    , ((modm, xK_Left), spawn "spotify-control.py prev")
-    , ((modm, xK_Right), spawn "spotify-control.py next")
-    , ((modm, xK_Up), spawn "spotify-control.py play_pause")
-    , ((modm, xK_Down), spawn "spotify-control.py stop")
-    , ((modm, xK_o), spawn "spotify-control.py full_info")
-    , ((modm .|. shiftMask, xK_d), spawn "set-display.py")
+    -- , ((modm, xK_Left), spawn "spotify-control.py prev")
+    -- , ((modm, xK_Right), spawn "spotify-control.py next")
+    -- , ((modm, xK_Up), spawn "spotify-control.py play_pause")
+    -- , ((modm, xK_Down), spawn "spotify-control.py stop")
+    -- , ((modm, xK_o), spawn "spotify-control.py full_info")
+    -- , ((modm .|. shiftMask, xK_d), spawn "set-display.py")
 
     , ((modm, xK_1), windows (viewOnScreen 1 "www/1"))
     , ((modm, xK_2), windows (viewOnScreen 0 "dev/2"))
@@ -134,8 +134,6 @@ manage_hook = composeAll [
   className =? "Google-chrome-stable" --> doShift "www/1",
   className =? "Google-chrome-unstable" --> doShift "www/1",
   className =? "Chromium" --> doShift "www/1",
-  className =? "Nw" --> doShift "www/1",
-  className =? "Nw-0.8.6" --> doShift "www/1",
   className =? "QupZilla" --> doShift "www/1",
 
   className =? "Emacs" --> doShift "dev/2",

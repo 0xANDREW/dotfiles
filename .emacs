@@ -48,8 +48,8 @@
 (setq case-fold-search t)
 (tool-bar-mode -1)
 (show-paren-mode t)
-(rainbow-mode t)
-(rainbow-delimiters-mode t)
+;; (rainbow-mode t)
+;; (rainbow-delimiters-mode t)
 (column-number-mode 1)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 

@@ -24,6 +24,9 @@ windows:
   - z3:
   - z4:
   - z5:
+  - z6:
+  - z7:
+  - z8:    
   - htop: htop
   - mc: mc
 

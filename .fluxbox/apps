@@ -2,3 +2,19 @@
   [Position]	(WINCENTER)	{0 0}
   [Layer]	{2}
 [end]
+
+[app] (class=Emacs)
+      [Workspace] {1}
+[end]       
+
+[app] (class=URxvt)
+      [Workspace] {1}
+[end]       
+
+[app] (class=Google-chrome-stable)
+      [Workspace] {0}
+[end]       
+
+[app] (class=Spotify)
+      [Workspace] {2}
+[end]

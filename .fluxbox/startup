@@ -3,6 +3,7 @@
 xmodmap "/home/andrew/.Xmodmap"
 nm-applet &
 parcellite &
+xflux -z 02143
 
 exec fluxbox
 # or if you want to keep a log:

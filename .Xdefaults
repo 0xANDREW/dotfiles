@@ -1,2 +1,7 @@
+Emacs.FontBackend: xft
+Emacs.font: MonteCarlo-10
+
+URxvt.font: xft:MonteCarlo:pixelsize=10
 URxvt.reverseVideo: True
 URxvt.scrollBar: False
+URxvt.saveLines: 10000

@@ -12,10 +12,10 @@ OnDesktop Mouse3 :RootMenu
 # OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
 
 # alt + left/right click to move/resize a window
-OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindow Mod4 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
 OnWindowBorder Move1 :StartMoving
 
-OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnWindow Mod4 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
 OnLeftGrip Move1 :StartResizing bottomleft
 OnRightGrip Move1 :StartResizing bottomright
 
@@ -71,17 +71,17 @@ Mod4 0 :Exec dmenu_run
 # 160 :Exec amixer sset Master,0 toggle
 
 # current window commands
-Mod1 F4 :Close
-Mod1 F5 :Kill
-Mod1 F9 :Minimize
-Mod1 F10 :Maximize
-Mod1 F11 :Fullscreen
+Mod4 Shift c :Close
+# Mod1 F5 :Kill
+# Mod1 F9 :Minimize
+# Mod1 F10 :Maximize
+# Mod1 F11 :Fullscreen
 
 # open the window menu
-Mod1 space :WindowMenu
+# Mod1 space :WindowMenu
 
 # exit fluxbox
-Control Mod1 Delete :Exit
+# Control Mod1 Delete :Exit
 
 # change to previous/next workspace
 Control Mod4 Left :PrevWorkspace

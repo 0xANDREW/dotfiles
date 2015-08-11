@@ -8,9 +8,11 @@ nm-applet &
 parcellite &
 xflux -z $ZIP
 weatherboy -l $WOEID &
-tmux-start.sh &
+$HOME/bin/tmux-start.sh &
 emacs &
 kupfer --no-splash &
+dropbox &
+xscreensaver -no-splash &
 
 exec fluxbox
 # or if you want to keep a log:

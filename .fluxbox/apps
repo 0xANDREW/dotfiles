@@ -9,6 +9,8 @@
 
 [app] (class=URxvt)
       [Workspace] {1}
+	[Deco] {NONE}
+	[Maximized] {yes}
 [end]       
 
 [app] (class=Google-chrome-stable)

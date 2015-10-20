@@ -9,7 +9,7 @@ parcellite &
 xflux -z $ZIP
 weatherboy -l $WOEID &
 $HOME/bin/tmux-start.sh &
-emacs &
+# emacs &
 kupfer --no-splash &
 dropbox &
 xscreensaver -no-splash &

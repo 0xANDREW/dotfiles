@@ -1,24 +1,25 @@
 [app] (name=fbrun)
   [Position]	(WINCENTER)	{0 0}
   [Layer]	{2}
-[end]
+[ed]
 
 [app] (class=Emacs)
-      [Workspace] {1}
-[end]       
+      [Workspace] {s}
+send]       
 
 [app] (class=URxvt)
       [Workspace] {1}
-	[Deco] {NONE}
 	[Maximized] {yes}
 [end]       
 
 [app] (class=Google-chrome-stable)
       [Workspace] {0}
+	[Maximized] {yes}
 [end]       
 
 [app] (class=Spotify)
       [Workspace] {2}
+	[Maximized] {yes}
 [end]
 
 [app] (class=Transmission-gtk)

@@ -18,7 +18,7 @@ session.screen0.toolbar.widthPercent:	100
 session.screen0.toolbar.height:	0
 session.screen0.toolbar.maxOver:	false
 session.screen0.toolbar.layer:	Dock
-session.screen0.toolbar.placement:	BottomCenter
+session.screen0.toolbar.placement:	TopCenter
 session.screen0.toolbar.autoHide:	false
 session.screen0.tab.placement:	TopLeft
 session.screen0.tab.width:	64

@@ -20,3 +20,8 @@
 [app] (class=Spotify)
       [Workspace] {2}
 [end]
+
+[app] (class=Transmission-gtk)
+  [Workspace] {3}
+[end]
+

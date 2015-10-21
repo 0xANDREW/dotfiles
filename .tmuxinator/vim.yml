@@ -3,15 +3,18 @@ root: ~/
 
 windows:
   - dev:
-      layout: ce5f,319x95,0,0{209x95,0,0,0,109x95,210,0,1}
+      layout: main-vertical
       panes:
         - vim
         - 
+        -
   - misc:
-      layout: even-horizontal
+      layout: tiled
       panes:
         - 
         - 
+        -
+        -
   - info:
       layout: even-horizontal
       panes:

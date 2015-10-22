@@ -131,7 +131,7 @@ layout_hook = avoidStruts
         $ Tall 1 (3/100) (1/2)
 
 manage_hook = composeAll [
-  className =? "Google-chrome-stable" --> doShift "www/1",
+  className =? "Google-chrome" --> doShift "www/1",
   className =? "Google-chrome-unstable" --> doShift "www/1",
   className =? "Chromium" --> doShift "www/1",
   className =? "QupZilla" --> doShift "www/1",

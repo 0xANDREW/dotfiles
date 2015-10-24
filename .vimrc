@@ -2,6 +2,7 @@ syntax on
 filetype indent plugin on
 colorscheme desert
 
+set hlsearch
 set ignorecase
 set number
 set tabstop=8
@@ -20,3 +21,7 @@ if exists('+autochdir')
 else
   autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
 endif
+
+" Break into pdb
+command! Pdb :normal iimport pdb; pdb.set_trace()
+

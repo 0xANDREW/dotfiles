@@ -3,4 +3,6 @@
 .emacs.d/tramp
 fbrun_history
 *.swp
+.vim/.netrwhist
+.fluxbox/log
 

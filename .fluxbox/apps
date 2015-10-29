@@ -1,28 +1,19 @@
-[app] (name=fbrun)
-  [Position]	(WINCENTER)	{0 0}
-  [Layer]	{2}
-[ed]
-
-[app] (class=Emacs)
-      [Workspace] {s}
-send]       
-
-[app] (class=URxvt)
-      [Workspace] {1}
-	[Maximized] {yes}
+[app] (urxvt)
+  [Workspace] {1}
+  [Maximized] {yes}
 [end]       
 
-[app] (class=Google-chrome-stable)
-      [Workspace] {0}
-	[Maximized] {yes}
+[app] (google-chrome)
+  [Workspace] {0}
+  [Maximized] {yes}
 [end]       
 
-[app] (class=Spotify)
-      [Workspace] {2}
-	[Maximized] {yes}
+[app] (spotify)
+  [Workspace] {2}
+  [Maximized] {yes}
 [end]
 
-[app] (class=Transmission-gtk)
+[app] (transmission-gtk)
   [Workspace] {3}
 [end]
 

@@ -1,20 +1,16 @@
 #!/bin/sh
 
 ZIP=02143
-WOEID=12758742
 
 xmodmap "/home/andrew/.Xmodmap"
 nm-applet &
 parcellite &
 xflux -z $ZIP
-weatherboy -l $WOEID &
 $HOME/bin/tmux-start.sh &
-# emacs &
-kupfer --no-splash &
 dropbox &
 xscreensaver -no-splash &
 transmission-gtk &
 
 exec fluxbox
 # or if you want to keep a log:
-# exec fluxbox -log "/home/andrew/.fluxbox/log"
+#exec fluxbox -log "/home/andrew/.fluxbox/log"

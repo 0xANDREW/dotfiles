@@ -8,11 +8,16 @@ windows:
         - vim
         - 
         -
-  - misc:
+  - terms:
       layout: tiled
       panes:
         - 
         - 
+        -
+        -
+        -
+        -
+        -
         -
         -
   - info:

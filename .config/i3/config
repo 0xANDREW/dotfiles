@@ -126,6 +126,7 @@ bindsym $mod+Tab exec "i3-cycle.py"
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
 bindsym XF86AudioPrev exec "playerctl -p spotify previous"
+bindsym $mod+Shift+x exec "xscreensaver-command -lock"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -186,6 +187,6 @@ exec "nm-applet"
 exec "dropbox"
 exec "xflux -z 02143"
 exec "dunst"
-exec "xscreensaver --no-splash"
+exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
 

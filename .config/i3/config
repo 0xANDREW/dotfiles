@@ -176,6 +176,8 @@ workspace 9 output HDMI2
 assign [class="google-chrome"] 1
 assign [class="URxvt"] 2
 assign [class="Spotify"] 6
+assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
+assign [class="Git-gui"] 3
 
 exec "~/.screenlayout/xrandr-work.sh"
 exec "urxvt"

@@ -122,7 +122,7 @@ bindsym $mod+q restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+0 exec "dmenu_run"
-bindsym $mod+Tab exec "i3-cycle.py"
+bindsym $mod+Tab exec "~/bin/i3-cycle.py"
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
 bindsym XF86AudioPrev exec "playerctl -p spotify previous"
@@ -159,8 +159,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         tray_output primary
+        tray_output DVI1
         position top
         output HDMI2
+        output DVI1
 }
 
 workspace_layout tabbed

@@ -159,11 +159,14 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         tray_output primary
-        tray_output DVI1
+#        tray_output DVI1
         position top
         output HDMI2
         output DVI1
 }
+
+new_window pixel 1
+new_float normal
 
 workspace_layout tabbed
 
@@ -182,6 +185,8 @@ assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
 assign [class="Git-gui"] 3
 assign [class="Spotify"] 6
 assign [class="Transmission-gtk"] 7
+
+for_window [class="Zim"] floating enable
 
 exec "~/.screenlayout/xrandr-work.sh"
 exec "urxvt"

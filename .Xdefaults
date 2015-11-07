@@ -6,3 +6,7 @@ URxvt.reverseVideo: True
 URxvt.scrollBar: False
 URxvt.saveLines: 10000
 URxvt.cursorBlink: True
+
+*color12: #3333bf
+*color4:  #3465A4
+

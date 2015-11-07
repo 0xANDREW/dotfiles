@@ -178,9 +178,10 @@ workspace 9 output HDMI2
 
 assign [class="google-chrome"] 1
 assign [class="URxvt"] 2
-assign [class="Spotify"] 6
 assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
 assign [class="Git-gui"] 3
+assign [class="Spotify"] 6
+assign [class="Transmission-gtk"] 7
 
 exec "~/.screenlayout/xrandr-work.sh"
 exec "urxvt"
@@ -189,6 +190,7 @@ exec "nm-applet"
 exec "dropbox"
 exec "xflux -z 02143"
 exec "dunst"
-exec "xscreensaver -no-splash"
+#exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
+exec "transmission-gtk"
 

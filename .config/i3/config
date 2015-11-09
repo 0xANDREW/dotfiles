@@ -184,6 +184,7 @@ assign [class="URxvt"] 2
 assign [class="Spotify"] 6
 assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
 assign [class="Git-gui"] 3
+assign [class="Wireshark"] 3
 
 for_window [class="Zim"] floating enable
 

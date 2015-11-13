@@ -186,6 +186,7 @@ assign [class="Git-gui"] 3
 assign [class="Wireshark"] 3
 assign [class="Spotify"] 6
 assign [class="Transmission-gtk"] 7
+assign [class="Gnucash"] 8
 
 for_window [class="Zim"] floating enable
 

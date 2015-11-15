@@ -158,11 +158,12 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output primary
+        tray_output eDP-0
 #        tray_output DVI1
         position top
         output HDMI2
         output DVI1
+        output eDP-0
 }
 
 new_window pixel 1
@@ -185,6 +186,7 @@ assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
 assign [class="Git-gui"] 3
 assign [class="Spotify"] 6
 assign [class="Transmission-gtk"] 7
+assign [class="Steam"] 8
 
 for_window [class="Zim"] floating enable
 
@@ -195,7 +197,7 @@ exec "nm-applet"
 exec "dropbox"
 exec "xflux -z 02143"
 exec "dunst"
-#exec "xscreensaver -no-splash"
+exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
 exec "transmission-gtk"
 

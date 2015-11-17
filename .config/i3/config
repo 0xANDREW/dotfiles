@@ -159,10 +159,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         tray_output primary
-#        tray_output DVI1
         position top
-        output HDMI2
-        output DVI1
 }
 
 new_window pixel 1
@@ -195,7 +192,7 @@ exec "nm-applet"
 exec "dropbox"
 exec "xflux -z 02143"
 exec "dunst"
-#exec "xscreensaver -no-splash"
+exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
 exec "transmission-gtk"
 

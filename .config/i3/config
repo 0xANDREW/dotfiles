@@ -158,12 +158,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output eDP-0
-#        tray_output DVI1
+        tray_output primary
         position top
-        output HDMI2
-        output DVI1
-        output eDP-0
 }
 
 new_window pixel 1
@@ -190,7 +186,6 @@ assign [class="Steam"] 8
 
 for_window [class="Zim"] floating enable
 
-exec "~/.screenlayout/xrandr-work.sh"
 exec "urxvt"
 exec "parcellite"
 exec "nm-applet"
@@ -200,4 +195,6 @@ exec "dunst"
 exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
 exec "transmission-gtk"
+exec "~/bin/xrandr-monitor.sh"
+
 

@@ -195,6 +195,5 @@ exec "dunst"
 exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
 exec "transmission-gtk"
-exec "~/bin/xrandr-monitor.sh"
 
 

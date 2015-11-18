@@ -4,7 +4,7 @@ syntax on
 filetype indent plugin on
 colorscheme desert
 
-set statusline+=%F
+set statusline=%F%m 
 set omnifunc=syntaxcomplete#Complete
 set hlsearch
 set ignorecase

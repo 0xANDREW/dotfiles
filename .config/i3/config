@@ -180,9 +180,11 @@ assign [class="google-chrome"] 1
 assign [class="URxvt"] 2
 assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
 assign [class="Git-gui"] 3
+assign [class="Wireshark"] 3
 assign [class="Spotify"] 6
 assign [class="Transmission-gtk"] 7
 assign [class="Steam"] 8
+assign [class="Gnucash"] 8
 
 for_window [class="Zim"] floating enable
 

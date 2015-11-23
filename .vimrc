@@ -29,3 +29,6 @@ endif
 " Break into pdb
 command! Pdb :normal iimport pdb; pdb.set_trace()
 
+" ctrl-j inserts a line break in normal mode
+:nnoremap <NL> i<CR><ESC>
+

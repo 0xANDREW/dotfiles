@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:montecarlo 8
+font pango:vga 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -158,9 +158,18 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks
+  status_command i3blocks
         tray_output primary
         position top
+  colors {
+    separator #333333
+    background #2c001e
+    statusline #aea79f
+    focused_workspace #dd4814 #dd4814 #ffffff
+    active_workspace #902a07 #902a07 #aea79f
+    inactive_workspace #902a07 #902a07 #aea79f
+    urgent_workspace #77216f #77216f #ffffff
+  }
 }
 
 new_window pixel 1
@@ -199,3 +208,7 @@ exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
 exec "~/bin/pyxrandr.py && i3-msg restart"
 
+client.focused #dd4814 #dd4814 #ffffff #902a07
+client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750
+client.unfocused #5e2750 #5e2750 #aea79f #5e2750
+client.urgent #77216f #77216f #ffffff #efb73e

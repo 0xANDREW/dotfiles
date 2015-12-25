@@ -5,7 +5,7 @@ windows:
   - dev:
       layout: main-vertical
       panes:
-        - vim
+        - nvim
         - 
         -
   - terms:

@@ -126,6 +126,8 @@ bindsym $mod+Tab exec "~/bin/i3-cycle.py"
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
 bindsym XF86AudioPrev exec "playerctl -p spotify previous"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 1 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 1 -5%"
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
 bindsym $mod+Shift+m exec "~/bin/pyxrandr.py 2>> /tmp/pyxrandr.log && i3-msg restart"
 
@@ -207,6 +209,7 @@ exec "dunst"
 exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
 exec "~/bin/pyxrandr.py && i3-msg restart"
+exec "hsetroot -fill ~/Downloads/Glitch.png"
 
 client.focused #dd4814 #dd4814 #ffffff #902a07
 client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750

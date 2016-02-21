@@ -16,7 +16,7 @@ windows:
         -
         -
         -
-  - info:
+  - sys:
       layout: even-horizontal
       panes:
         - mc

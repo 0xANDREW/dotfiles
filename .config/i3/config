@@ -210,6 +210,7 @@ exec "kupfer --no-splash"
 exec "google-chrome-stable"
 exec "~/bin/chrome-work.sh"
 exec "hsetroot -fill ~/Downloads/Glitch.png"
+exec "blueman-applet"
 exec "~/bin/pyxrandr.py && i3-msg restart"
 
 client.focused #dd4814 #dd4814 #ffffff #902a07

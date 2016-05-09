@@ -212,6 +212,7 @@ exec "~/bin/chrome-work.sh"
 exec "hsetroot -fill ~/Downloads/Glitch.png"
 exec "blueman-applet"
 exec "~/bin/pyxrandr.py && i3-msg restart"
+exec "setxkbmap -option ctrl:swapcaps"
 
 client.focused #dd4814 #dd4814 #ffffff #902a07
 client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750

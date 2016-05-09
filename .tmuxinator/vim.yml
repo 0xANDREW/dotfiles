@@ -21,4 +21,9 @@ windows:
       panes:
         - mc
         - htop
+  - big_terms:
+      layout: even-horizontal
+      panes:
+        - 
+        -
 

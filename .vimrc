@@ -19,6 +19,8 @@ set shiftwidth=2
 set softtabstop=2
 set background=dark
 set synmaxcol=1000
+set wildmode=longest,list,full
+set wildmenu
 
 if exists('+cc')
   set cc=80

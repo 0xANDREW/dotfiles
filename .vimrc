@@ -21,6 +21,9 @@ set background=dark
 set synmaxcol=1000
 set wildmode=longest,list,full
 set wildmenu
+:set backupcopy=yes
+
+let g:jsx_ext_required = 0
 
 if exists('+cc')
   set cc=80
@@ -37,6 +40,7 @@ endif
 command! Pudb :normal iimport pudb; pudb.set_trace()
 command! Pdb :normal iimport pdb; pdb.set_trace()
 command! Ipdb :normal iimport ipdb; ipdb.set_trace()
+command! Killall bufdo bdelete
 
 " ctrl-j inserts a line break in normal mode
 :nnoremap <NL> i<CR><ESC>

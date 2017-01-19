@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:vga, FontAwesome 10
+font pango:profont 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -76,9 +76,9 @@ bindsym $mod+Shift+c kill
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+t floating toggle
@@ -121,7 +121,7 @@ bindsym $mod+q restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+0 exec "dmenu_run -fn vga"
+bindsym $mod+0 exec "rofi -show run"
 bindsym $mod+Tab exec "~/bin/i3-cycle.py"
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
@@ -164,13 +164,13 @@ bar {
         tray_output primary
         position top
   colors {
-    separator #333333
-    background #2c001e
-    statusline #aea79f
-    focused_workspace #dd4814 #dd4814 #ffffff
-    active_workspace #902a07 #902a07 #aea79f
-    inactive_workspace #902a07 #902a07 #aea79f
-    urgent_workspace #77216f #77216f #ffffff
+    separator #666666
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #2f343a #900000 #ffffff
   }
 }
 
@@ -188,7 +188,8 @@ workspace 7 output HDMI2
 workspace 8 output HDMI2
 workspace 9 output HDMI2
 
-assign [class="google-chrome"] 1
+assign [class="Google-chrome"] 1
+assign [class="Chromium"] 1
 assign [class="URxvt"] 2
 assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
 assign [class="Wireshark"] 3
@@ -207,14 +208,14 @@ exec "xflux -z 02143"
 exec "dunst"
 exec "xscreensaver -no-splash"
 exec "kupfer --no-splash"
-exec "google-chrome-stable"
-exec "~/bin/chrome-work.sh"
+exec "chromium"
+exec "~/bin/chromium-work.sh"
 exec "hsetroot -fill ~/Downloads/Glitch.png"
-exec "blueman-applet"
 exec "~/bin/pyxrandr.py && i3-msg restart"
 exec "setxkbmap -option ctrl:swapcaps"
 
-client.focused #dd4814 #dd4814 #ffffff #902a07
-client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750
-client.unfocused #5e2750 #5e2750 #aea79f #5e2750
-client.urgent #77216f #77216f #ffffff #efb73e
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
+

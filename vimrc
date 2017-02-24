@@ -1,3 +1,20 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'othree/html5.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'travisjeffery/vim-auto-mkdir'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'scrooloose/nerdtree'
+Plugin 'nvie/vim-flake8'
+Plugin 'gregsexton/MatchTag'
+call vundle#end()
+
 syntax on
 filetype indent plugin on
 colorscheme desert
@@ -19,7 +36,7 @@ set background=dark
 set synmaxcol=1000
 set wildmode=longest,list,full
 set wildmenu
-:set backupcopy=yes
+set backupcopy=yes
 
 let g:jsx_ext_required = 0
 

@@ -157,23 +157,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#  status_command i3blocks
-#    tray_output primary
-#    position top
-#  colors {
-#    separator #666666
-#    background #222222
-#    statusline #dddddd
-#    focused_workspace #0088CC #0088CC #ffffff
-#    active_workspace #333333 #333333 #ffffff
-#    inactive_workspace #333333 #333333 #888888
-#    urgent_workspace #2f343a #900000 #ffffff
-#  }
-#}
-
 new_window pixel 1
 new_float normal
 
@@ -192,21 +175,21 @@ workspace 9 output HDMI2
 assign [class="Google-chrome"] 1
 assign [class="Chromium"] 1
 assign [class="URxvt"] 2
-#assign [class="Spotify"] 6
-
 for_window [class="Spotify"] move to workspace 6
-for_window [class="Zim"] floating enable
+assign [class="Steam"] 8
+assign [class="Gnucash"] 8
 
 exec "urxvt -e tmuxinator start vim"
 exec "parcellite"
 exec "nm-applet"
 exec "dunst"
 exec "xscreensaver -no-splash"
-exec "chromium-browser"
-exec "setxkbmap -option ctrl:swapcaps"
 exec "hsetroot -fill $HOME/Downloads/Yosemite-Color-Block.png"
 exec "syndaemon -i1 -KRt"
-exec_always --no-startup-id "$HOME/bin/launch-polybar"
+exec "chromium"
+exec "setxkbmap -option ctrl:swapcaps"
+exec $HOME/crashplan/bin/crashplan start
+exec_always --no-startup-id $HOME/bin/launch-polybar
 
 client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e

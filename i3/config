@@ -129,7 +129,7 @@ bindsym XF86AudioPrev exec "playerctl -p spotify previous"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
-bindsym $mod+Shift+m exec "$HOME/bin/xrandr-auto.sh"
+bindsym $mod+Shift+m exec "$HOME/bin/xrandr-auto.py"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -178,6 +178,8 @@ assign [class="URxvt"] 2
 for_window [class="Spotify"] move to workspace 6
 assign [class="Steam"] 8
 assign [class="Gnucash"] 8
+
+for_window [class="Xmessage"] floating enable
 
 exec "urxvt -e tmuxinator start vim"
 exec "parcellite"

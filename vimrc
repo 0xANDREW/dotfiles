@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 syntax on
 filetype indent plugin on
 colorscheme desert

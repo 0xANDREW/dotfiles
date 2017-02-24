@@ -1,8 +1,6 @@
-.emacs.d/auto-save-list
-.emacs.d/el-get
-.emacs.d/tramp
 fbrun_history
 *.swp
-.vim/.netrwhist
-.fluxbox/log
+vim/.netrwhist
+fluxbox/log
+
 

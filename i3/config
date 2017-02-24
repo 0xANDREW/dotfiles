@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:profont 9
+font pango:montecarlo 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -122,14 +122,14 @@ bindsym $mod+q restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+0 exec "rofi -show run"
-bindsym $mod+Tab exec "~/bin/i3-cycle.py"
+bindsym $mod+Tab exec $HOME/bin/i3-cycle.py
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
 bindsym XF86AudioPrev exec "playerctl -p spotify previous"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 1 +5%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 1 -5%"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
-bindsym $mod+Shift+m exec "~/bin/pyxrandr.py 2>> /tmp/pyxrandr.log && i3-msg restart"
+bindsym $mod+Shift+m exec $HOME/bin/xrandr-auto
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -159,20 +159,20 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  status_command i3blocks
-        tray_output primary
-        position top
-  colors {
-    separator #666666
-    background #222222
-    statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
-    active_workspace #333333 #333333 #ffffff
-    inactive_workspace #333333 #333333 #888888
-    urgent_workspace #2f343a #900000 #ffffff
-  }
-}
+#bar {
+#  status_command i3blocks
+#    tray_output primary
+#    position top
+#  colors {
+#    separator #666666
+#    background #222222
+#    statusline #dddddd
+#    focused_workspace #0088CC #0088CC #ffffff
+#    active_workspace #333333 #333333 #ffffff
+#    inactive_workspace #333333 #333333 #888888
+#    urgent_workspace #2f343a #900000 #ffffff
+#  }
+#}
 
 new_window pixel 1
 new_float normal
@@ -192,28 +192,21 @@ workspace 9 output HDMI2
 assign [class="Google-chrome"] 1
 assign [class="Chromium"] 1
 assign [class="URxvt"] 2
-assign [class="net-sourceforge-squirrel_sql-client-Main"] 3
-assign [class="Wireshark"] 3
-assign [class="Spotify"] 6
-assign [class="Steam"] 8
-assign [class="Gnucash"] 8
+#assign [class="Spotify"] 6
 
+for_window [class="Spotify"] move to workspace 6
 for_window [class="Zim"] floating enable
 
 exec "urxvt -e tmuxinator start vim"
-exec "volumeicon"
 exec "parcellite"
 exec "nm-applet"
-exec "dropbox"
-exec "xflux -z 02143"
 exec "dunst"
 exec "xscreensaver -no-splash"
-exec "kupfer --no-splash"
-exec "chromium"
-exec "~/bin/start-chromium work"
-exec "hsetroot -fill ~/Downloads/Glitch.png"
-exec "~/bin/pyxrandr.py && i3-msg restart"
+exec "chromium-browser"
 exec "setxkbmap -option ctrl:swapcaps"
+exec "hsetroot -fill $HOME/Downloads/Yosemite-Color-Block.png"
+exec "syndaemon -i1 -KRt"
+exec_always --no-startup-id "$HOME/bin/launch-polybar"
 
 client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e

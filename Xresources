@@ -1,18 +1,11 @@
-Emacs.FontBackend: xft
-Emacs.font: MonteCarlo-10
-
 URxvt.font: xft:MonteCarlo:pixelsize=10
-URxvt.reverseVideo: True
 URxvt.scrollBar: False
 URxvt.saveLines: 10000
 URxvt.cursorBlink: True
+URxvt.internalBorder: 0
+URxvt.externalBorder: 0
 
-XTerm*reverseVideo: on
-
-*color12: #3333bf
-*color4:  #3465A4
-
-rofi.font: vga 10
+rofi.font: montecarlo 9
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme

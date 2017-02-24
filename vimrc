@@ -13,11 +13,16 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
+Plugin 'chriskempson/base16-vim'
 call vundle#end()
 
 syntax on
 filetype indent plugin on
-colorscheme desert
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType js set omnifunc=htmlcomplete#CompleteTags

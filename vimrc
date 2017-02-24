@@ -65,3 +65,5 @@ command! Killall bufdo bdelete
 " ctrl-j inserts a line break in normal mode
 :nnoremap <NL> i<CR><ESC>
 
+map <C-n> :NERDTreeToggle<CR>
+

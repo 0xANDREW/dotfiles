@@ -122,7 +122,7 @@ bindsym $mod+q restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+0 exec "rofi -show run"
-bindsym $mod+Tab exec "$HOME/bin/i3-cycle.py"
+bindsym $mod+Tab exec "i3-cycle.py"
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
 bindsym XF86AudioPrev exec "playerctl -p spotify previous"
@@ -183,15 +183,20 @@ for_window [class="Xmessage"] floating enable
 
 exec "urxvt -e tmuxinator start vim"
 exec "parcellite"
+exec "dropbox"
+exec "volumeicon"
 exec "nm-applet"
 exec "dunst"
 exec "xscreensaver -no-splash"
 exec "hsetroot -fill $HOME/Downloads/Yosemite-Color-Block.png"
 exec "syndaemon -i1 -KRt"
 exec "start-chromium.sh"
+exec "start-chromium.sh work"
 exec "setxkbmap -option ctrl:swapcaps"
 exec "$HOME/crashplan/bin/crashplan start"
-exec_always --no-startup-id "$HOME/bin/launch-polybar.sh"
+exec_always --no-startup-id "launch-polybar.sh"
+
+client.background #ffffff
 
 client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e

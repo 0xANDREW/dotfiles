@@ -50,7 +50,7 @@ font-2 = siji:pixelsize=10
 
 modules-left = bspwm i3 xwindow
 modules-center = 
-modules-right = filesystem volume memory cpu battery temperature darksky date
+modules-right = filesystem pkg volume memory cpu battery temperature darksky date
 
 tray-position = right
 tray-padding = 2
@@ -358,5 +358,13 @@ interval = 1800
 format = <label>
 label = %output%
 exec = .config/polybar/darksky.sh
+
+[module/pkg]
+type = custom/script
+interval = 1800
+format = <label>
+label = pkg: %output%
+exec = .config/polybar/pkg.sh
+
 
 ; vim:ft=dosini

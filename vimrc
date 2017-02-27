@@ -56,11 +56,11 @@ else
   autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
 endif
 
-" Break into pdb
 command! Pudb :normal iimport pudb; pudb.set_trace()
 command! Pdb :normal iimport pdb; pdb.set_trace()
 command! Ipdb :normal iimport ipdb; ipdb.set_trace()
 command! Killall bufdo bdelete
+command! SudoSave :w !sudo tee %
 
 " ctrl-j inserts a line break in normal mode
 :nnoremap <NL> i<CR><ESC>

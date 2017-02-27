@@ -27,7 +27,9 @@ endif
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType js set omnifunc=htmlcomplete#CompleteTags
 
-"set statusline=%F%m 
+" disable auto-comment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 set omnifunc=syntaxcomplete#Complete
 set hlsearch
 set incsearch
@@ -63,6 +65,7 @@ command! Killall bufdo bdelete
 command! SudoSave :w !sudo tee %
 
 " ctrl-j inserts a line break in normal mode
+" i think this is emacs legacy
 :nnoremap <NL> i<CR><ESC>
 
 map <C-n> :NERDTreeToggle<CR>

@@ -14,7 +14,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
 Plugin 'chriskempson/base16-vim'
+Plugin 'vim-jp/vim-cpp'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()
+
+set dir=$HOME/.vim_tmp/swap
+if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
 syntax on
 filetype indent plugin on

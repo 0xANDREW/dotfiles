@@ -14,7 +14,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
 Plugin 'chriskempson/base16-vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'wincent/command-t'
 call vundle#end()
+
+set dir=$HOME/.vim/tmp/swap
+if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
 syntax on
 filetype indent plugin on
@@ -69,4 +76,8 @@ command! SudoSave :w !sudo tee %
 :nnoremap <NL> i<CR><ESC>
 
 map <C-n> :NERDTreeToggle<CR>
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_by_filename = 1
+let g:ctrlp_regexp = 1
 

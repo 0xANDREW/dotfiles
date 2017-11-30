@@ -17,10 +17,11 @@ windows:
         -
         -
   - sys:
-      layout: even-horizontal
+      layout: main-vertical
       panes:
         - mc
         - htop
+        - slurm -i wlp58s0
   - big_terms:
       layout: even-horizontal
       panes:

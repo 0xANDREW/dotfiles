@@ -18,9 +18,10 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wincent/command-t'
+Plugin 'vim-jp/vim-cpp'
 call vundle#end()
 
-set dir=$HOME/.vim/tmp/swap
+set dir=$HOME/.vim_tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
 syntax on

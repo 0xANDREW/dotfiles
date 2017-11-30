@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:montecarlo 9
+font pango:profont 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -162,15 +162,15 @@ new_float normal
 
 workspace_layout tabbed
 
-workspace 1 output HDMI1
-workspace 4 output HDMI1
-workspace 6 output HDMI1
-
-workspace 2 output HDMI2 
-workspace 3 output HDMI2
-workspace 7 output HDMI2
-workspace 8 output HDMI2
-workspace 9 output HDMI2
+workspace 1 output HDMI2
+#workspace 4 output HDMI1
+#workspace 6 output HDMI1
+#
+#workspace 2 output HDMI2 
+#workspace 3 output HDMI2
+#workspace 7 output HDMI2
+#workspace 8 output HDMI2
+#workspace 9 output HDMI2
 
 assign [class="Google-chrome"] 1
 assign [class="Chromium"] 1
@@ -181,6 +181,7 @@ assign [class="Gnucash"] 8
 
 for_window [class="Xmessage"] floating enable
 
+exec xflux -z 02143
 exec "urxvt -e tmuxinator start vim"
 exec "parcellite"
 exec "nm-applet"
@@ -190,6 +191,7 @@ exec "hsetroot -fill $HOME/Downloads/Yosemite-Color-Block.png"
 exec "syndaemon -i1 -KRt"
 exec "google-chrome"
 exec_always "setxkbmap -option ctrl:swapcaps"
+exec "$HOME/crashplan/bin/crashplan start"
 exec_always --no-startup-id "launch-polybar.sh"
 
 client.background #ffffff

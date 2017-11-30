@@ -121,7 +121,7 @@ bindsym $mod+q restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+0 exec "rofi -show run"
+bindsym $mod+0 exec "dmenu_run"
 bindsym $mod+Tab exec "i3-cycle.py"
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
@@ -188,8 +188,8 @@ exec "dunst"
 exec "xscreensaver -no-splash"
 exec "hsetroot -fill $HOME/Downloads/Yosemite-Color-Block.png"
 exec "syndaemon -i1 -KRt"
-exec "start-chromium.sh"
-exec "setxkbmap -option ctrl:swapcaps"
+exec "google-chrome"
+exec_always "setxkbmap -option ctrl:swapcaps"
 exec_always --no-startup-id "launch-polybar.sh"
 
 client.background #ffffff

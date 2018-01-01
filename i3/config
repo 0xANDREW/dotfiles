@@ -9,6 +9,10 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+gaps inner 5
+gaps outer 5
+smart_gaps on
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -121,7 +125,7 @@ bindsym $mod+q restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+0 exec "dmenu_run"
+bindsym $mod+0 exec "dmenu_run -nb white -nf black"
 bindsym $mod+Tab exec "i3-cycle.py"
 bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
 bindsym XF86AudioNext exec "playerctl -p spotify next"
@@ -160,7 +164,7 @@ bindsym $mod+r mode "resize"
 new_window pixel 1
 new_float normal
 
-workspace_layout tabbed
+workspace_layout default
 
 workspace 1 output HDMI2
 #workspace 4 output HDMI1

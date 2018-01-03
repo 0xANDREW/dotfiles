@@ -323,12 +323,12 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
+format-underline = #00ff00
+format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = t: %temperature%
-label-warn = %temperature%
+label-warn = t: %temperature%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 

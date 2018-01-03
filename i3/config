@@ -185,7 +185,8 @@ assign [class="Gnucash"] 8
 
 for_window [class="Xmessage"] floating enable
 
-exec xflux -z 02143
+#exec xflux -z 02143
+exec "dropbox"
 exec "urxvt -e tmuxinator start vim"
 exec "parcellite"
 exec "nm-applet"

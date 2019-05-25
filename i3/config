@@ -9,15 +9,15 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-gaps inner 5
-gaps outer 5
-smart_gaps on
+#gaps inner 5
+#gaps outer 5
+#smart_gaps on
 
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:profont 10
+font pango:montecarlo 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -127,9 +127,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+0 exec "dmenu_run -nb white -nf black"
 bindsym $mod+Tab exec "i3-cycle.py"
-bindsym XF86AudioPlay exec "playerctl -p spotify play-pause"
-bindsym XF86AudioNext exec "playerctl -p spotify next"
-bindsym XF86AudioPrev exec "playerctl -p spotify previous"
+bindsym XF86AudioPlay exec "playerctl -p mopidy play-pause"
+bindsym XF86AudioNext exec "playerctl -p mopidy next"
+bindsym XF86AudioPrev exec "playerctl -p mopidy previous"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
@@ -176,17 +176,16 @@ workspace 1 output HDMI2
 #workspace 8 output HDMI2
 #workspace 9 output HDMI2
 
-assign [class="Google-chrome"] 1
 assign [class="Chromium"] 1
 assign [class="URxvt"] 2
-for_window [class="Spotify"] move to workspace 6
+for_window [class="mopidy"] move to workspace 6
 assign [class="Steam"] 8
 assign [class="Gnucash"] 8
 
 for_window [class="Xmessage"] floating enable
 
 #exec xflux -z 02143
-exec "dropbox"
+exec "dropbox start"
 exec "urxvt -e tmuxinator start vim"
 exec "parcellite"
 exec "nm-applet"
@@ -194,7 +193,9 @@ exec "dunst"
 exec "xscreensaver -no-splash"
 exec "hsetroot -fill $HOME/Downloads/Yosemite-Color-Block.png"
 exec "syndaemon -i1 -KRt"
-exec "google-chrome"
+exec "$HOME/bin/xrandr-auto.py && i3-msg restart"
+#exec "/opt/pia/run.sh"
+exec_always "xmodmap $HOME/.xmodmaprc"
 exec_always "setxkbmap -option ctrl:swapcaps"
 exec_always --no-startup-id "launch-polybar.sh"
 
@@ -204,4 +205,3 @@ client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
-

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LATLNG="42.353,-71.061"
+LATLNG="34.2116,-118.2322"
 KEY=$DARKSKY_API_KEY
 
 JSON=`curl https://api.darksky.net/forecast/$KEY/$LATLNG?units=si 2> /dev/null`

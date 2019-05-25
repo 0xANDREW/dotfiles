@@ -19,6 +19,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wincent/command-t'
 Plugin 'vim-jp/vim-cpp'
+Plugin 'posva/vim-vue'
 call vundle#end()
 
 set dir=$HOME/.vim_tmp/swap

@@ -21,7 +21,7 @@ windows:
       panes:
         - mc
         - htop
-        - slurm -i wlp58s0
+        - slurm -i wlp4s0
   - big_terms:
       layout: even-horizontal
       panes:

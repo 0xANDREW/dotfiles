@@ -23,7 +23,7 @@ margin-bottom = 5
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 20
+height = 22
 offset-x = 0
 offset-y = 0
 
@@ -44,13 +44,13 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 3
 
-font-0 = profont:pixelsize=11
+font-0 = PxPlus IBM VGA8:pixelsize=12
 font-1 = unifont:fontformat=truetype:size=6:heavy;-2
 font-2 = siji:pixelsize=10
 
 modules-left = i3 xwindow
 modules-center = 
-modules-right = volume filesystem pkg memory cpu battery network temperature darksky date
+modules-right = volume pkg memory cpu battery network temperature darksky date
 
 tray-position = right
 tray-padding = 2
@@ -237,7 +237,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/network
 interface = wlp4s0
 format-connected = <label-connected>
-label-connected = net: %downspeed%/%upspeed%
+label-connected = net: %downspeed:9%/%upspeed:9%
 
 [module/date]
 type = internal/date

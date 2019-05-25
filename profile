@@ -10,5 +10,4 @@ if [[ -e ~/.env-private ]]; then
   source ~/.env-private
 fi
 
-eval "$(rbenv init -)"
 

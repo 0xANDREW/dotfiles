@@ -1,4 +1,4 @@
-URxvt.font: xft:profont:size=8
+URxvt.font: xft:montecarlo:size=8
 URxvt.scrollBar: False
 URxvt.saveLines: 10000
 URxvt.cursorBlink: True

@@ -236,7 +236,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/network]
 type = internal/network
-interface = wlp4s0
+interface = wlp58s0
 format-connected = <label-connected>
 label-connected = [NET] %downspeed:9%/%upspeed:9%
 format-connected-underline = #ed2abc
@@ -386,6 +386,13 @@ format = <label>
 format-underline = #16ceb6
 label = [PKG] %output%
 exec = .config/polybar/pkg.sh
+
+[module/brightness]
+type = custom/script
+interval = 5
+format = <label>
+label= brt: %output%
+exec = bin/sysfs-brightness.sh get
 
 
 ; vim:ft=dosini

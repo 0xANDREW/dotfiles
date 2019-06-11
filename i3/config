@@ -132,6 +132,8 @@ bindsym XF86AudioNext exec "playerctl -p mopidy next"
 bindsym XF86AudioPrev exec "playerctl -p mopidy previous"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86MonBrightnessUp exec "sudo $HOME/bin/sysfs-brightness.sh inc"
+bindsym XF86MonBrightnessDown exec "sudo $HOME/bin/sysfs-brightness.sh dec"
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
 bindsym $mod+Shift+m exec "$HOME/bin/xrandr-auto.py"
 
@@ -166,7 +168,8 @@ new_float normal
 
 workspace_layout default
 
-workspace 1 output HDMI2
+workspace 9 output eDP-1
+#workspace 1 output HDMI2
 #workspace 4 output HDMI1
 #workspace 6 output HDMI1
 #
@@ -181,20 +184,21 @@ assign [class="URxvt"] 2
 for_window [class="mopidy"] move to workspace 6
 assign [class="Steam"] 8
 assign [class="Gnucash"] 8
+assign [class="Slack"] 9
 
 for_window [class="Xmessage"] floating enable
 
-#exec xflux -z 02143
-exec "dropbox start"
 exec "urxvt -e tmuxinator start vim"
 exec "parcellite"
 exec "nm-applet"
 exec "dunst"
 exec "xscreensaver -no-splash"
 exec "hsetroot -fill $HOME/Downloads/Yosemite-Color-Block.png"
-exec "syndaemon -i1 -KRt"
 exec "$HOME/bin/xrandr-auto.py && i3-msg restart"
-#exec "/opt/pia/run.sh"
+exec "$HOME/bin/display-checker.sh"
+#exec "syndaemon -i1 -KRt"
+#exec "syndaemon -d -i 0.2"
+exec "mopidy"
 exec_always "xmodmap $HOME/.xmodmaprc"
 exec_always "setxkbmap -option ctrl:swapcaps"
 exec_always --no-startup-id "launch-polybar.sh"

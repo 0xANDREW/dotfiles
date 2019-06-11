@@ -19,7 +19,6 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wincent/command-t'
 Plugin 'vim-jp/vim-cpp'
-Plugin 'posva/vim-vue'
 call vundle#end()
 
 set dir=$HOME/.vim_tmp/swap
@@ -53,6 +52,7 @@ set synmaxcol=1000
 set wildmode=longest,list,full
 set wildmenu
 set backupcopy=yes
+"set timeoutlen=100 ttimeoutlen=0
 
 let g:jsx_ext_required = 0
 
@@ -78,8 +78,9 @@ command! SudoSave :w !sudo tee %
 :nnoremap <NL> i<CR><ESC>
 
 map <C-n> :NERDTreeToggle<CR>
+noremap Q <Nop>
 let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 

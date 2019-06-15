@@ -1,5 +1,6 @@
 name: vim
 root: ~/
+pre_window: source $HOME/bin/set-creds.sh prod
 
 windows:
   - dev:
@@ -8,20 +9,26 @@ windows:
         - vim
         - 
         -
+
+  - dashboards:
+      layout: tiled
+      panes:
+        - cd dev/neutered-api && npm i && nodemon app.js
+        - cd dev/ops-dashboard && npm i && npm start
+        - cd dev/mfg-dashboard && npm i && npm start
+        - cd dev/mfg-ws-proxy && npm i && nodemon ws-proxy.js
+        -
+        -
+
   - terms:
-      layout: bace,319x94,0,0{118x94,0,0,5,200x94,119,0[200x47,119,0{100x47,119,0,11,99x47,220,0,14},200x46,119,48{100x46,119,48,12,99x46,220,48,13}]} 
+      layout: a928,319x94,0,0{122x94,0,0,1,196x94,123,0[196x47,123,0{98x47,123,0,5,97x47,222,0,6},196x46,123,48{98x46,123,48,7,97x46,222,48,8}]}
       panes:
+        - tmux select-layout -t terms "a928,319x94,0,0{122x94,0,0,1,196x94,123,0[196x47,123,0{98x47,123,0,5,97x47,222,0,6},196x46,123,48{98x46,123,48,7,97x46,222,48,8}]}"
         - 
-        - 
         -
         -
         -
-  - sys:
-      layout: main-vertical
-      panes:
-        - mc
-        - htop
-        - slurm -i wlp4s0
+
   - big_terms:
       layout: even-horizontal
       panes:

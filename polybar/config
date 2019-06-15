@@ -202,7 +202,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp58s0
+interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -256,7 +256,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% %time%
-label-margin = 3
+;label-margin = 3
 
 [module/volume]
 type = internal/volume

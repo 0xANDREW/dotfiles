@@ -1,6 +1,6 @@
 name: vim
 root: ~/
-pre_window: source $HOME/bin/set-creds.sh prod
+#pre_window: source $HOME/bin/set-creds.sh prod
 
 windows:
   - dev:
@@ -10,15 +10,15 @@ windows:
         - 
         -
 
-  - dashboards:
-      layout: tiled
-      panes:
-        - cd dev/neutered-api && npm i && nodemon app.js
-        - cd dev/ops-dashboard && npm i && npm start
-        - cd dev/mfg-dashboard && npm i && npm start
-        - cd dev/mfg-ws-proxy && npm i && nodemon ws-proxy.js
-        -
-        -
+        #  - dashboards:
+        #      layout: tiled
+        #      panes:
+        #        - cd dev/neutered-api && npm i && nodemon app.js
+        #        - cd dev/ops-dashboard && npm i && npm start
+        #        - cd dev/mfg-dashboard && npm i && npm start
+        #        - cd dev/mfg-ws-proxy && npm i && nodemon ws-proxy.js
+        #        -
+        #        -
 
   - terms:
       layout: a928,319x94,0,0{122x94,0,0,1,196x94,123,0[196x47,123,0{98x47,123,0,5,97x47,222,0,6},196x46,123,48{98x46,123,48,7,97x46,222,48,8}]}
@@ -29,9 +29,9 @@ windows:
         -
         -
 
-  - big_terms:
-      layout: even-horizontal
-      panes:
-        - 
-        -
+        #  - big_terms:
+        #      layout: even-horizontal
+        #      panes:
+        #        - 
+        #        -
 

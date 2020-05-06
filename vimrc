@@ -18,7 +18,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wincent/command-t'
-Plugin 'vim-jp/vim-cpp'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
 set dir=$HOME/.vim_tmp/swap
